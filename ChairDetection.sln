@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChairDetection", "ChairDetection.csproj", "{ED167B6C-015B-EF5D-75DA-DEEE2A5B770E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChairDetection.Editor", "ChairDetection.Editor.csproj", "{6A3DD9BE-E20B-5AF2-8E1B-A572B645FC28}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED167B6C-015B-EF5D-75DA-DEEE2A5B770E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED167B6C-015B-EF5D-75DA-DEEE2A5B770E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED167B6C-015B-EF5D-75DA-DEEE2A5B770E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED167B6C-015B-EF5D-75DA-DEEE2A5B770E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A3DD9BE-E20B-5AF2-8E1B-A572B645FC28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A3DD9BE-E20B-5AF2-8E1B-A572B645FC28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A3DD9BE-E20B-5AF2-8E1B-A572B645FC28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A3DD9BE-E20B-5AF2-8E1B-A572B645FC28}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
