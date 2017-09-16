@@ -54,8 +54,8 @@ public class ChairDetection : MonoBehaviour {
             // 解析結果を取得 ShapeResultは配列で512から変更するとesultsShape[i].positionがずれた?謎??
             SpatialUnderstandingDllShapes.ShapeResult[] resultsShape = new SpatialUnderstandingDllShapes.ShapeResult[512];
 
+            // PlayspaceAlignmentを利用して配置するオブジェクトのrotationを決める(これを使わなくても問題ないっぽい？？)
             SpatialUnderstandingDll.Imports.QueryPlayspaceAlignment(SpatialUnderstanding.Instance.UnderstandingDLL.GetStaticPlayspaceAlignmentPtr());
-
             SpatialUnderstandingDll.Imports.PlayspaceAlignment alignment = SpatialUnderstanding.Instance.UnderstandingDLL.GetStaticPlayspaceAlignment();
 
             // 検知された椅子の座標にオブジェクト配置
@@ -65,9 +65,11 @@ public class ChairDetection : MonoBehaviour {
                 resultsShape.Length,
                 resultsShapePtr);
 
-            if(0 < i)
+            Debug.Log("resulltCount = " + resulltCount);
+
+            if(0 < resulltCount)
             {
-                Instantiate(prefab, resultsShape[i].position, Quaternion.LookRotation(alignment.BasisZ, alignment.BasisY));
+                Instantiate(prefab, resultsShape[0].position, Quaternion.LookRotation(alignment.BasisZ, alignment.BasisY));
 
                 // メッシュの情報を非表示
                 SpatialUnderstanding.Instance.GetComponent<SpatialUnderstandingCustomMesh>().DrawProcessedMesh = false;
